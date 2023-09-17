@@ -34,11 +34,105 @@
                 <img src="images/user.png">
             </div>           
             <div class="about-col-2">
-                <h1>About Me</h1>
+                <h1 class="sub-title">About Me</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Iusto facilis quaerat modi doloribus? Ratione, magnam! 
+                Blanditiis provident alias mollitia voluptates porro vel veniam, optio et? 
+                Error repudiandae inventore a hic.
+                </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Technologies')">Technologies</p>
+                    <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    <p class="tab-links" onclick="opentab('Projects')">Projects</p>
+                </div>
+                <div class="tab-contents active-tab" id="Techonologies">
+                    <ul>
+                        <li><span>Python</span><br>Flask, FastAPI</li>
+                        <li><span>Javascript</span><br>Vue, Node, React</li>
+                        <li><span>Cloud Platforms</span><br>AWS, GCP, Azure</li>
+                        <li><span>Database</span><br>PostgresQL</li>
+                        <li><span>Containerization</span><br>Docker, Kubernetes</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Experience">
+                    <ul>
+                        <li><span>2022-Present</span><br>Technical Support Specialist at V7 Labs</li>
+                        <li><span>2020-2021</span><br>DevOps Engineer Intern at L2D</li>
+                        <li><span>2017-2019</span><br>IT Specialist at University of Tennessee</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Education">
+                    <ul>
+                        <li><span>DevOps & Backend Development</span><br>NuCamp Coding Bootcamp</li>
+                        <li><span>2019</span><br>BA from University of Tennessee</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Projects">
+                    <ul>
+                        <li><span>Project name </span><br>Placeholder Text</li>
+                        <li><span>Project name</span><br>Placeholder Text</li>
+                        <li><span>Project name</span><br>Placeholder Text</li>
+                    </ul>
+                </div>
+    </div>
+</div>
+<!------------Contact--------->
+<div class="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p>contact@example.com</p>
+                <p>phone number</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/muata-hunt/"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/muatahunt"><i class="fab fa-github"></i></a>
+                </div>
             </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="name" placeholder="Your Name Here" required>
+                    <input type="text" name="email" placeholder="Your Email Address Here" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message Here"></textarea>
+                    <button type="Submit">Submit</button>
+                </form>
+            </div> 
         </div>
     </div>
 </div>
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents")
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+
+</script>
+
+
 </body>
 </html>
